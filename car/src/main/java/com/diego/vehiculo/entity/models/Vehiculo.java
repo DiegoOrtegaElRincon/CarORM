@@ -58,12 +58,12 @@ public class Vehiculo implements Serializable {
 		this.modelo = modelo;
 	}
 
-	public String getAñoFabricacion() {
+	public String getAnoFabricacion() {
 		return anoFabricacion;
 	}
 
-	public void setAñoFabricacion(String añoFabricacion) {
-		this.anoFabricacion = añoFabricacion;
+	public void setAnoFabricacion(String anoFabricacion) {
+		this.anoFabricacion = anoFabricacion;
 	}
 
 	public String getPlaca() {
@@ -74,20 +74,5 @@ public class Vehiculo implements Serializable {
 		this.placa = placa;
 	}
 
-	public SeguroVehiculo getSeguroVehiculo() {
-		return seguroVehiculo;
-	}
-
-	public void setSeguroVehiculo(SeguroVehiculo seguroVehiculo) {
-		this.seguroVehiculo = seguroVehiculo;
-	}
-
-	public HistorialMantenimiento getHistorialMantenimiento() {
-		return historialMantenimiento;
-	}
-
-	public void setHistorialMantenimiento(HistorialMantenimiento historialMantenimiento) {
-		this.historialMantenimiento = historialMantenimiento;
-	}
 
 }

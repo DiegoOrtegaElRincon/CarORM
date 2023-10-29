@@ -1,0 +1,5 @@
+package com.diego.vehiculo.entity.models;
+
+public class HistorialMantenimiento {
+
+}

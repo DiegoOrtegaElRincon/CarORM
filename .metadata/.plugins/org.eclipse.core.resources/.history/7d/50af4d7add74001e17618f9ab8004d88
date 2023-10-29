@@ -1,0 +1,39 @@
+package com.diego.vehiculo.entity.services;
+
+import java.util.List;
+
+import com.diego.vehiculo.entity.models.HistorialMantenimiento;
+
+public class IHistorialMantenimientoServiceImpl implements IHistorialMantenimientoService{
+
+	@Override
+	public HistorialMantenimiento get(long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<HistorialMantenimiento> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void post(HistorialMantenimiento historial) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void put(HistorialMantenimiento historial, long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

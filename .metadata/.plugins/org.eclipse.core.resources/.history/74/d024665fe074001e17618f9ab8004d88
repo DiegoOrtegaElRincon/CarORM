@@ -1,0 +1,5 @@
+package com.diego.vehiculo.controllers;
+
+public class SeguroVehiculoController {
+
+}

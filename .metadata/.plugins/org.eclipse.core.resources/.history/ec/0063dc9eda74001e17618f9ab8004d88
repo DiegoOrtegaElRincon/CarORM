@@ -1,0 +1,39 @@
+package com.diego.vehiculo.entity.services;
+
+import java.util.List;
+
+import com.diego.vehiculo.entity.models.SeguroVehiculo;
+
+public class ISeguroVehiculoImpl implements ISeguroVehiculoService{
+
+	@Override
+	public SeguroVehiculo get(long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<SeguroVehiculo> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void post(SeguroVehiculo car) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void put(SeguroVehiculo car, long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

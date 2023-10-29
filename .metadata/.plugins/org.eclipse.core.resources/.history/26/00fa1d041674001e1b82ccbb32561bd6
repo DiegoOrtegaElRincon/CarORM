@@ -1,0 +1,47 @@
+package com.diego.books;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.diego.books.entity.dao.IBookDao;
+import com.diego.books.entity.models.Book;
+import com.diego.books.entity.services.IbookService;
+
+@Service
+public class BookServiceImpl implements IbookService {
+
+	@Autowired
+	private IBookDao bookDao;
+
+	@Override
+	public Book get(long id) {
+		return bookDao.findById(id).get();
+	}
+
+	@Override
+	public List<Book> getAll() {
+		return (List<Book>) bookDao.findAll().get();
+
+	}
+
+	@Override
+	public void post(Book book) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void put(Book book, long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

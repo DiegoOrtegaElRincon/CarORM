@@ -1,0 +1,8 @@
+package com.diego.books;
+
+import com.diego.books.entity.dao.IBookDao;
+import com.diego.books.entity.services.IbookService;
+
+public class BookServiceImpl implements IbookService {
+
+}

@@ -1,0 +1,44 @@
+package com.diego.vehiculo.entity.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.diego.vehiculo.entity.dao.IHistorialMantenimientoDao;
+import com.diego.vehiculo.entity.models.HistorialMantenimiento;
+
+public class IHistorialMantenimientoServiceImpl implements IHistorialMantenimientoService {
+
+	@Autowired
+	IHistorialMantenimientoDao historialMantenimientoDao;
+
+	@Override
+	public HistorialMantenimiento get(long id) {
+		return historialMantenimientoDao.findById(id).get();			
+	}
+
+	@Override
+	public List<HistorialMantenimiento> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void post(HistorialMantenimiento historial) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void put(HistorialMantenimiento historial, long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.diego.car.entity.services;
+
+import java.util.List;
+
+import com.diego.car.entity.models.Book;
+
+public interface ICarService {
+	
+	public Book get(long id);
+	public List<Book > getAll();
+	public void post(Book book);
+	public void put(Book book, long id);
+	public void delete(long id);
+}

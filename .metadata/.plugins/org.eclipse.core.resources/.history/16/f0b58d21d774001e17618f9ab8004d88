@@ -1,0 +1,14 @@
+package com.diego.vehiculo.entity.services;
+
+import java.util.List;
+
+import com.diego.vehiculo.entity.models.Car;
+
+public interface ICarService {
+	
+	public Car get(long id);
+	public List<Car > getAll();
+	public void post(Car car);
+	public void put(Car car, long id);
+	public void delete(long id);
+}

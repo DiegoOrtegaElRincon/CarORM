@@ -1,0 +1,21 @@
+package com.diego.vehiculo.entity.models;
+
+@Entity
+@Table(name = "seguros_vehiculos")
+public class SeguroVehiculo {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    @OneToOne
+    @JoinColumn(name = "vehiculo_id")
+    private Vehiculo vehiculo;
+    
+    private String compañiaDeSeguros;
+    private Date fechaInicio;
+    private Date fechaVencimiento;
+    private String tipoDeCobertura;
+    
+    // Getters y setters
+}
+

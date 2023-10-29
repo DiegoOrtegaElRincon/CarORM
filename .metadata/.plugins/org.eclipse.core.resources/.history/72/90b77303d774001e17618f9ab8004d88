@@ -1,0 +1,48 @@
+package com.diego.car.entity.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.diego.car.entity.dao.IBookDao;
+import com.diego.car.entity.models.Car;
+
+@Service
+public class BookServiceImpl implements ICarService {
+
+	@Autowired
+	private IBookDao bookDao;
+
+	@Override
+	public Car get(long id) {
+		return bookDao.findById(id).get();
+	}
+
+	@Override
+	public List<Car> getAll() {
+		return (List<Car>) bookDao.findAll();
+
+	}
+
+	@Override
+	public void post(Car car) {
+		bookDao.save(car);
+	}
+
+	@Override
+	public void put(Car car, long id) {
+		bookDao.findById(id).ifPresent((x) -> {
+			car.setId(id);
+			bookDao.save(car);
+		});
+
+	}
+
+	@Override
+	public void delete(long id) {
+		bookDao.deleteById(id);
+
+	}
+
+}

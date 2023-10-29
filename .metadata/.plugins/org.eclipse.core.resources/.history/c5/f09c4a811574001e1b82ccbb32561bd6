@@ -1,0 +1,5 @@
+package com.diego.books;
+
+public class BookServiceImpl {
+
+}

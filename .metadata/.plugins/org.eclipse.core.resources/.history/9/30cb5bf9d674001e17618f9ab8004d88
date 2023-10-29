@@ -1,0 +1,10 @@
+package com.diego.car.entity.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.diego.car.entity.models.Car;
+import com.diego.car.entity.models.Vehiculo;
+
+public interface IBookDao extends CrudRepository<Vehiculo, Long>{
+
+}

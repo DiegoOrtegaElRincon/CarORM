@@ -1,0 +1,7 @@
+package com.diego.vehiculo.entity.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface IHistorialMantenimientoDao extends CrudRepository<HistorialMantenimiento, Long> {
+}
+

@@ -1,0 +1,21 @@
+package com.diego.car.entity.models;
+
+@Entity
+@Table(name = "vehiculos")
+public class Vehiculo {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String marca;
+    private String modelo;
+    private int añoFabricacion;
+    private String placa;
+    
+    @OneToOne(mappedBy = "vehiculo")
+    private SeguroVehiculo seguroVehiculo;
+    
+    @OneToOne(mappedBy = "vehiculo")
+    private HistorialMantenimiento historialMantenimiento;
+    
+    // Getters y setters
+}

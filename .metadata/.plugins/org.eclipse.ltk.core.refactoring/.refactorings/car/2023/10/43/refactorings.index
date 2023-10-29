@@ -1,0 +1,23 @@
+1698333568410	Rename type 'DemoApplication'
+1698333572245	Rename type 'DemoApplicationTests'
+1698333915674	Rename compilation unit 'books.java'
+1698335889077	Move compilation unit
+1698345644302	Delete element
+1698346758475	Rename type 'BookApplication'
+1698346760032	Rename type 'BookApplicationTests'
+1698346775660	Rename package 'com.diego.books.controllers'
+1698417372190	Delete element
+1698417547412	Rename package 'com.diego.books'
+1698417565936	Rename type 'BookController'
+1698417592931	Rename type 'IbookService'
+1698417610275	Rename type 'Book'
+1698417650827	Rename compilation unit 'Car.java'
+1698417732004	Rename type 'IBookDao'
+1698417759061	Rename package 'com.diego.car'
+1698417807079	Rename type 'BookServiceImpl'
+1698417946818	Rename type 'ICarService'
+1698418269296	Rename type 'CarController'
+1698418500220	Rename compilation unit 'HistorialMantenimiento.java'
+1698419851653	Rename type 'VehiculoServiceImpl'
+1698419932563	Delete element
+1698420052383	Rename type 'ISeguroVehiculoImpl'

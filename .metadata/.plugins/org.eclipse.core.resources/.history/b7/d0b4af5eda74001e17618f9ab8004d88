@@ -1,0 +1,15 @@
+package com.diego.vehiculo.entity.services;
+
+import java.util.List;
+
+import com.diego.vehiculo.entity.models.SeguroVehiculo;
+
+public interface ISeguroVehiculoService {
+
+	
+	public Vehiculo get(long id);
+	public List<SeguroVehiculo> getAll();
+	public void post(Vehiculo car);
+	public void put(Vehiculo car, long id);
+	public void delete(long id);
+}

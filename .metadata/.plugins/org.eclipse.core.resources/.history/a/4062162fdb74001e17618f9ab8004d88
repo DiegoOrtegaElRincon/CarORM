@@ -1,0 +1,46 @@
+package com.diego.vehiculo.entity.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.diego.vehiculo.entity.dao.ISeguroVehiculoDao;
+import com.diego.vehiculo.entity.models.SeguroVehiculo;
+
+public class ISeguroVehiculoImpl implements ISeguroVehiculoService {
+
+	@Autowired
+	ISeguroVehiculoDao seguroVehiculoDao;
+
+	@Override
+	public SeguroVehiculo get(long id) {
+		return seguroVehiculoDao.findById(id).get();
+	}
+
+	@Override
+	public List<SeguroVehiculo> getAll() {
+		return (List<SeguroVehiculo>) seguroVehiculoDao.findAll();
+	}
+
+	@Override
+	public void post(SeguroVehiculo car) {
+		seguroVehiculoDao.save(car);
+
+	}
+
+	@Override
+	public void put(SeguroVehiculo car, long id) {
+		seguroVehiculoDao.findById(id).ifPresent((x) -> {
+			car.setId(id);
+			seguroVehiculoDao.save(car);
+		}
+
+	}
+
+	@Override
+	public void delete(long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

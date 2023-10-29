@@ -1,0 +1,5 @@
+package com.diego.books.entity.services;
+
+public interface IbookService {
+
+}

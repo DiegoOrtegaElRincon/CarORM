@@ -1,0 +1,19 @@
+package com.diego.vehiculo.entity.services;
+
+import java.util.List;
+
+import com.diego.vehiculo.entity.models.HistorialMantenimiento;
+import com.diego.vehiculo.entity.models.SeguroVehiculo;
+
+public class IHistorialMantenimientoService {
+
+	public HistorialMantenimiento get(long id);
+
+	public List<HistorialMantenimiento> getAll();
+
+	public void post(SeguroVehiculo car);
+
+	public void put(SeguroVehiculo car, long id);
+
+	public void delete(long id);
+}

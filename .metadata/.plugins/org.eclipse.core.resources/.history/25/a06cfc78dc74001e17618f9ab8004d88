@@ -1,0 +1,5 @@
+package com.diego.vehiculo.entity.services;
+
+public class IHistorialMantenimientoServiceImpl {
+
+}

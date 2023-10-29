@@ -1,0 +1,5 @@
+package com.diego.books.entity.models;
+
+public class Page {
+
+}

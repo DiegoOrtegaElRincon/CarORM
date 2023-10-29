@@ -1,0 +1,27 @@
+package com.diego.vehiculo.entity.models;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "historial_mantenimiento")
+public class HistorialMantenimiento {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@OneToOne
+	@JoinColumn(name = "vehiculo_id")
+	private Vehiculo vehiculo;
+
+	private String fechaMantenimiento;
+	private String descripcionMantenimiento;
+	private double costo;
+
+	// Getters y setters
+}

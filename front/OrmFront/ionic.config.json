@@ -1,0 +1,7 @@
+{
+  "name": "OrmFront",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

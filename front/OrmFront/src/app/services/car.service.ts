@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -12,7 +12,6 @@ const httpOptions = {
 })
 
 
-
 export class carService {
 
   currentCarId!: number;
@@ -20,7 +19,7 @@ export class carService {
   endpoint = "http://localhost:8080/vehiculo";
 
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(public httpClient: HttpClient) { }
 
   setCurrentCarId(id: number) {
     this.currentCarId = id;
@@ -38,12 +37,12 @@ export class carService {
     return this.httpClient.get(this.endpoint + `/${id}`)
   }
 
-  addCars(Car: any) {
+  addCar(Car: any) {
     let bodyEncoded = new URLSearchParams();
-    bodyEncoded.append("model", Car.marca);
-    bodyEncoded.append("year", Car.modelo);
-    bodyEncoded.append("model", Car.anoFabricacion);
-    bodyEncoded.append("year", Car.placa);
+    bodyEncoded.append("marca", Car.marca);
+    bodyEncoded.append("modelo", Car.modelo);
+    bodyEncoded.append("anoFabricacion", Car.anoFabricacion);
+    bodyEncoded.append("placa", Car.placa);
     let body = bodyEncoded.toString();
 
     return this.httpClient.post(this.endpoint, body, httpOptions);
@@ -55,10 +54,10 @@ export class carService {
 
   updateCars(id: number, Car: any) {
     let bodyEncoded = new URLSearchParams();
-    bodyEncoded.append("model", Car.marca);
-    bodyEncoded.append("year", Car.modelo);
-    bodyEncoded.append("model", Car.anoFabricacion);
-    bodyEncoded.append("year", Car.placa);
+    bodyEncoded.append("marca", Car.marca);
+    bodyEncoded.append("modelo", Car.modelo);
+    bodyEncoded.append("anoFabricacion", Car.anoFabricacion);
+    bodyEncoded.append("placa", Car.placa);
     let body = bodyEncoded.toString();
 
     return this.httpClient.put(this.endpoint + `/${id}`, body, httpOptions);

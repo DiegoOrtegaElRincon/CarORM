@@ -44,7 +44,14 @@ export class CarAddPage{
       const anoFabricacion = this.carForm.value.anoFabricacion;
       const placa = this.carForm.value.placa;
 
-      this.CarService.addCars({ marca, modelo, anoFabricacion, placa }).subscribe(() => {
+      let car = [
+        marca,
+        modelo,
+        anoFabricacion,
+        placa
+      ]
+
+      this.CarService.addCar(car).subscribe(() => {
         this.router.navigateByUrl("/car-list");
       });
     }

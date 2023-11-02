@@ -19,7 +19,7 @@ export class carService {
   endpoint = "http://localhost:8080/vehiculo";
 
 
-  constructor(public httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   setCurrentCarId(id: number) {
     this.currentCarId = id;
@@ -33,7 +33,7 @@ export class carService {
     return this.httpClient.get(this.endpoint);
   }
 
-  getOne(id: number) {
+  getOne(id: String | null) {
     return this.httpClient.get(this.endpoint + `/${id}`)
   }
 

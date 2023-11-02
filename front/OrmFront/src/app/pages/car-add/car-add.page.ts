@@ -8,7 +8,7 @@ import { carService } from 'src/app/services/car.service';
   templateUrl: './car-add.page.html',
   styleUrls: ['./car-add.page.scss'],
 })
-export class CarAddPage{
+export class CarAddPage {
 
   carForm: FormGroup;
 
@@ -30,7 +30,7 @@ export class CarAddPage{
   }
 
 
-  ngOninit() {
+  async ngOninit() {
   }
 
   get errorControl() {
@@ -44,12 +44,12 @@ export class CarAddPage{
       const anoFabricacion = this.carForm.value.anoFabricacion;
       const placa = this.carForm.value.placa;
 
-      let car = [
-        marca,
-        modelo,
-        anoFabricacion,
-        placa
-      ]
+      let car = {
+        marca: marca,
+        modelo: modelo,
+        anoFabricacion: anoFabricacion,
+        placa: placa
+      }
 
       this.CarService.addCar(car).subscribe(() => {
         this.router.navigateByUrl("/car-list");
@@ -59,6 +59,9 @@ export class CarAddPage{
 
   gotoHome() {
     this.router.navigateByUrl("/")
+  }
+  gotoAddCars() {
+    this.router.navigateByUrl("car-add")
   }
 
 }

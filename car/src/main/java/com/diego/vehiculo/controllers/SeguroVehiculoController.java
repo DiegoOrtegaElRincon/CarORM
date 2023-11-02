@@ -3,6 +3,7 @@ package com.diego.vehiculo.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,7 @@ import com.diego.vehiculo.entity.services.ISeguroVehiculoService;
 
 
 @RestController
+@CrossOrigin(origins = "http://localhost:8100")
 public class SeguroVehiculoController {
 
 	@Autowired
@@ -36,7 +38,7 @@ public class SeguroVehiculoController {
 		seguroVehiculoService.post(car);
 	}
 
-	@PutMapping("/segurovehiculo")
+	@PutMapping("/segurovehiculo/{id}")
 	public void update(SeguroVehiculo car, @PathVariable(value = "id") long id) {
 		seguroVehiculoService.put(car, id);
 	}

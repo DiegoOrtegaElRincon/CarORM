@@ -14,8 +14,4 @@ export class HomePage {
     this.router.navigateByUrl("car-list")
   }
 
-  gotoAddCars(){
-    this.router.navigateByUrl("car-add")
-  }
-
 }

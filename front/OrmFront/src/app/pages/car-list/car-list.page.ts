@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Form } from '@angular/forms';
 import { Router } from '@angular/router';
 import { carService } from 'src/app/services/car.service';
 
@@ -24,12 +25,14 @@ export class CarListPage implements OnInit {
   }
 
   postCar(marca:string, modelo:string, anoFabricacion: string, placa:string){
+
     let car = {
       marca:marca,
       modelo:modelo,
       anoFabricacion:anoFabricacion,
       placa:placa
     }
+
     this.carService.addCar(car).subscribe(response =>{
       this.cars=response
       this.getAllCars()

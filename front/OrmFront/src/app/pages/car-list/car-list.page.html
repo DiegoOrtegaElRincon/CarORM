@@ -9,20 +9,21 @@
     <ion-toolbar>
       <ion-title size="large">car-list</ion-title>
     </ion-toolbar>
-
-    <ion-list>
-      <ion-item *ngFor="let b of cars">
-        <ion-label>
-          <h1>{{b.marca}}</h1>
-          <p>{{b.modelo}}</p>
-          <p>{{b.anoFabricacion}}</p>
-          <p>{{b.placa}}</p>
-        </ion-label>
-        <ion-button expand="block" (click)="deleteCar(b.id)">Delete</ion-button>
-        <ion-button expand="block" (click)="updateCar(b.id)">Update</ion-button>
-      </ion-item>
-    </ion-list>
-
-    <ion-button expand="block" (click)="gotoHome()">Go Home</ion-button>
   </ion-header>
+
+  <ion-list>
+    <ion-item *ngFor="let b of cars">
+      <ion-label>
+        <h1>{{b.marca}}</h1>
+        <p>{{b.modelo}}</p>
+        <p>{{b.anoFabricacion}}</p>
+        <p>{{b.placa}}</p>
+      </ion-label>
+      <ion-button expand="block" (click)="deleteCar(b.id)">Delete</ion-button>
+      <ion-button expand="block" (click)="updateCar(b.id)">Update</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="gotoHome()">Go Home</ion-button>
+
 </ion-content>
